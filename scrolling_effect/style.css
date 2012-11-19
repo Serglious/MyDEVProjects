@@ -1,0 +1,114 @@
+/*** Page Setup ***/
+body {
+    background-color: white;
+    font-family: 'Ovo', serif;
+    color: #39313c;
+    font-size: 18px;
+    line-height: 1.833em;
+}
+/* Links */
+a {
+    color: #8b78b9;
+    text-decoration: none;
+}
+a:hover {
+    color: #7460a4
+}
+/* Heading */
+h1 {
+    font-size: 3.722em;
+    margin-bottom: 1em;
+    line-height: 1;
+}
+p span {
+   font-size: 1.833em;
+}
+/* Content Blocks */
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+/* We use percentage values if display width less than 1200px */
+header .wrapper {
+    background: url("images/lavender1.jpg") no-repeat left center;
+    padding: 8.33333% 4.16667% 8.33333% 36.66667%;
+    background-size: 33.91667% auto; /* This value taken from tutorial, looks like it "find manually"
+                                        because 440px(pic size) / 1200 * 100 = 36.66667 */
+}
+#oil .wrapper {
+    background: url("images/lavender2.jpg") no-repeat 4.16667% center;
+    padding: 10% 4.16667% 10% 50%;
+    background-size: 41.66667%;
+}
+#culinary .wrapper {
+    background: url("images/lavender3.jpg") no-repeat 4.16667% center;
+    padding: 10% 4.16667% 10% 45.88883%;
+    background-size: 37.5% auto;
+}
+#dried .wrapper {
+    background: url("images/lavender4.jpg") no-repeat 4.16667% center;
+    padding: 10% 4.16667% 10% 41.66667%;
+    background-size: 33.33333% auto;
+}
+/* Otherwise use static pixels values */
+@media only screen and (min-width: 1200px) {
+    .wrapper {
+        width: 1200px;
+    }
+    header .wrapper {
+        padding: 100px 50px 100px 440px;
+    }
+    #oil .wrapper {
+        padding: 120px 50px 120px 600px;
+    }
+    #culinary .wrapper {
+        padding: 120px 50px 120px 550px;
+    }
+    #dried .wrapper {
+        padding: 120px 50px 120px 500px;
+    }
+}
+/* Create "background blocks" - define general bg properties*/
+section:after, header:after {
+    content: "";
+    display: block;
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+}
+/* "Scrolling effect" works because background-attachment set to "fixed".
+    For small screen resolution we disable this effect using @media */
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px), only screen and (min-device-width: 320px)
+    and (max-device-width: 480px) {
+    section:after, header:after { background-attachement: scroll; }
+}
+/* Define bg for each block */
+header:after {
+    background-image: url("images/lavenderbg1.jpg");
+}
+#oil:after {
+    background-image: url("images/lavenderbg2.jpg");
+}
+#culinary:after {
+    background-image: url("images/lavenderbg3.jpg");
+}
+#dried:after {
+    background-image: url("images/lavenderbg4.jpg");
+}
+footer {
+    background-color: #e6e6fa;
+    padding: 8.33333% 3.33333%; /* Looks like the author manually find that values
+                                    or maybe adjust the values to "values from some grid framework" */
+    text-align: center;
+}
+/* And get font smaller for devices with small screens */
+@media only screen and (max-width: 600px) {
+    body { font-size: 0.722em; }
+}
