@@ -1,0 +1,103 @@
+/* Page Setup */
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    color: #404040;
+    font-size: 18px;
+    padding: 200px 0 0;
+    min-height: 500px; /* Otherwise menu go down if change window height and don't scroll */
+}
+a a:visited {
+    text-decoration: none;
+    outline: none; /* Delete dotted borders */
+    color: #54a6de;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Go to our menu */
+#colorNav > ul {
+    width: 505px;
+    margin: 0 auto;
+}
+#colorNav > ul > li {
+    box-shadow: 0 0 10px rgba(100, 100, 100, 0.2) inset,1px 1px 1px #CCC;
+    display: inline-block;
+    margin: 1px;
+    border-radius: 3px;
+    position: relative;
+}
+#colorNav > ul > li > a {
+    color: white;
+    text-decoration: none;
+    font-size: 36px;
+    padding: 25px;
+}
+/* Go to sub-menu */
+#colorNav li ul {
+    position: absolute;
+    text-align: center;
+    width: 150px;
+    left: 50%;
+    margin-left: -75px;
+    top: 70px;
+    font: bold 12px 'Open Sans Condensed', sans-serif;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s linear;
+}
+#colorNav li ul li {
+    background-color: #313131;
+    position: relative;
+}
+#colorNav li ul li a {
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+#colorNav li ul li:nth-child(odd) {
+    background-color: #262626;
+}
+#colorNav li ul li:hover {
+    background-color: #444444;
+}
+#colorNav li ul li:first-child {
+    border-radius: 3px 3px 0 0;
+    margin-top: 25px;
+}
+#colorNav li ul li:first-child:before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    border: 5px solid transparent;
+    border-bottom-color: #313131;
+    left: 50%;
+    top: -10px;
+    margin-left: -5px;
+}
+#colorNav li ul li:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+#colorNav li:hover ul {
+    max-height: 241px; /* Sub-menu height - calculated manually, each element height is 214 px */
+}
+/* Colorize menu */
+#colorNav li.green {
+    background-color: #3bda00;
+}
+#colorNav li.red {
+    background-color: #ff4900;
+}
+#colorNav li.blue {
+    background-color: #0969a2;
+}
+#colorNav li.yellow {
+    background-color: #ffe800;
+}
+#colorNav li.pink {
+    background-color: #c10087;
+}
