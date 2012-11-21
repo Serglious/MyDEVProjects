@@ -38,7 +38,7 @@ body {
     position: relative;
     width: 48px;
     /* Animation */
-    //transition: all 0.9s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 .css3accordion li a {
     display: block;
@@ -149,4 +149,7 @@ body {
     background: -webkit-linear-gradient(left,  #353535 0%,#555555 100%);
     background: -moz-linear-gradient(left,  #353535 0%, #555555 100%);
     background: linear-gradient(left,  #353535 0%,#555555 100%);
+}
+#test {
+
 }
