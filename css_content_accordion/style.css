@@ -1,0 +1,9 @@
+/* Setup styles */
+body {
+    background: url("../css3_accordion/debut_light.png") repeat;
+    padding: 150px 0 0;
+    font-family: 'Ovo', serif;
+    font-size: 18px;
+    color: #262626;
+    line-height: 1;
+}

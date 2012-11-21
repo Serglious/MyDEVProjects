@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Content CSS3 Slider | Test Polygon</title>
+    <link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../common/reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="accordion">
+    <!-- Triggers -->
+    <span id="block1"></span>
+    <span id="block2"></span>
+    <span id="block3"></span>
+    <span id="block4"></span>
+    <span id="block5"></span>
+    <!-- Slides -->
+    <ol>
+        <li class="block1">
+            <a href="#block1">Block 1</a>
+            <div>
+                <h2>Block 1 content</h2>
+                <p>
+                    Ten years ago, only the most cutting-edge web designers used CSS for layouts and styling. Browser support for CSS layouts was slim and buggy, so these people advocated for web standards adherence, while creating hacks that made CSS layouts work in all browsers. One hack that became widely used was browser sniffing: Detecting which browser and version the user had by looking at the navigator.userAgent property in JavaScript. Browser sniffing allowed for quick and easy code forking, allowing developers to target different browsers with different instructions.
+                </p>
+            </div>
+        </li>
+        <li class="block2">
+            <a href="#block2">Block 2</a>
+            <h2>Block 2 content</h2>
+            <p>
+                Today, CSS-based layouts are commonplace and every browser has pretty solid support for them. But now we have CSS3 and HTML5, and the situation is repeating itself—different browsers demonstrate varying levels of support for these new technologies. We’ve smartened up, however, and no longer employ CSS hacks nor use browser sniffing—an unreliable, poor practice. We’ve also convinced more and more clients that websites don’t need to look exactly the same in every browser. So how do we deal with this new but familiar problem? Simple: We use feature detection, which means that we do not ask the browser “who are you?” and make unreliable assumptions from there on. Instead we ask the browser, “can you do this and that?” It’s a simple way to test browser capabilities, but doing all these tests manually all the time gets tiresome. To solve that problem (and others), you can use Modernizr.
+            </p>
+        </li>
+        <li class="block3">
+            <a href="#block3">Block 3</a>
+            <h3>Block 3 content</h3>
+            <p>
+                Modernizr is an open-source JavaScript library that makes it easy for web designers to support different levels of experiences, based on the capabilities of the visitor’s browser. This allows designers to take full advantage of everything in HTML5 and CSS3 that is implemented in some browsers, without sacrificing control over the user experience in other browsers.
+            </p>
+        </li>
+        <li class="block4">
+            <a href="#block4">Block 4</a>
+            <h2>Block 4 content</h2>
+            <p>
+                When you embed the Modernizr script in your page, it detects whether the current browser supports CSS3 features like @font-face, border-radius, border-image, box-shadow, rgba() and so forth, as well as HTML5 features like audio, video, localStorage, and the new input element types and attributes. With this knowledge, you can take advantage of these native implementations in browsers that support these features, and decide whether to create a JavaScript-based fallback or simply gracefully degrade the page in browsers that don’t support them. Additionally, Modernizr makes the new HTML5 elements available for styling in Internet Explorer, so that you can start using their improved semantics right away.
+            </p>
+        </li>
+        <li class="block5">
+            <a href="#block5">Block 5</a>
+            <h2>Block 5 content</h2>
+            <p>
+                Modernizr was created based on the principle of progressive enhancement, so it supports—encourages, even—building your website layer by layer, starting with a JavaScript-free foundation and adding layers of enhancement one by one. This is easy with Modernizr, since you’ll know what the browser is capable of. Let’s look at a practical example of how to use Modernizr to build cutting-edge websites.
+            </p>
+        </li>
+    </ol>
+</div>
+</body>
+</html>

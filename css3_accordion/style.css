@@ -38,7 +38,7 @@ body {
     position: relative;
     width: 48px;
     /* Animation */
-    transition: all 0.9s ease-in-out;
+    //transition: all 0.9s ease-in-out;
 }
 .css3accordion li a {
     display: block;
@@ -48,7 +48,7 @@ body {
     width: 48px;
 }
 /* Slide triggers label with absolute position */
-.css3accordion h2 {
+.css3accordion a h2 {
     font-size: 16px;
     font-weight: normal;
     height: 48px;
@@ -66,7 +66,7 @@ body {
     transform: translateX(-100%) rotate(-90deg);
     transform-origin: right top;
 }
-.css3accordion h2 span {
+.css3accordion a h2 span {
     background-color: #353535;
     border-radius: 4px;
     color: white;
@@ -78,7 +78,7 @@ body {
     -moz-user-select: none; /* Seems to be not working or have strange behavior... but select still works */
     user-select: none;
 }
-.css3accordion h2 span:hover {
+.css3accordion a h2 span:hover {
     background-color: #353535;
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,#353535), color-stop(100%,#555555));
     background: -webkit-linear-gradient(left,  #353535 0%,#555555 100%);
@@ -86,12 +86,23 @@ body {
     background: linear-gradient(left,  #353535 0%,#555555 100%);
 }
 /* Inner part */
-.css3accordion li div {
+.slide {
     margin-left: 5px;
     padding-left: 48px;
+    color: white;
+}
+.slide h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0 0 15px;
+
+}
+.slide p {
+    margin-top: 15px;
+    padding: 15px;
 }
 /* Slide counter */
-.css3accordion h2 span:after {
+.css3accordion a h2 span:after {
     color: #080808;
     font-weight: bold;
     left: 10%;
@@ -104,19 +115,19 @@ body {
     transform: rotate(90deg);
 }
 /* Counter values - for each slide */
-.css3accordion .slide1 h2 span:after {
+.css3accordion .slide1 a h2 span:after {
     content: '1';
 }
-.css3accordion .slide2 h2 span:after {
+.css3accordion .slide2 a h2 span:after {
     content: '2';
 }
-.css3accordion .slide3 h2 span:after {
+.css3accordion .slide3 a h2 span:after {
     content: '3';
 }
-.css3accordion .slide4 h2 span:after {
+.css3accordion .slide4 a h2 span:after {
     content: '4';
 }
-.css3accordion .slide5 h2 span:after {
+.css3accordion .slide5 a h2 span:after {
     content: '5';
 }
 /* Onclick event */
