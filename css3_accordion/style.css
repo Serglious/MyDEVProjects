@@ -23,3 +23,119 @@ body {
 .css3accordion > span {
     display: none;
 }
+/* Slides container */
+.css3accordion ol {
+    height: 100%;
+    list-style: none;
+    overflow: hidden;
+    position: relative;
+}
+/* Slides triggers */
+.css3accordion li {
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 48px;
+    /* Animation */
+    transition: all 0.9s ease-in-out;
+}
+.css3accordion li a {
+    display: block;
+    float: left;
+    height: 320px;
+    position: relative;
+    width: 48px;
+}
+/* Slide triggers label with absolute position */
+.css3accordion h2 {
+    font-size: 16px;
+    font-weight: normal;
+    height: 48px;
+    left: 0;
+    top: 0;
+    line-height: 265%;
+    margin: 0;
+    position: absolute;
+    width: 320px;
+    z-index: 1;
+    /* Transformations */
+    -webkit-backface-visibility: hidden; /* ??? */
+    -webkit-transform: translateX(-100%) rotate(-90deg);
+    -webkit-transform-origin: right top;
+    transform: translateX(-100%) rotate(-90deg);
+    transform-origin: right top;
+}
+.css3accordion h2 span {
+    background-color: #353535;
+    border-radius: 4px;
+    color: white;
+    display: block;
+    margin-top: 5px;
+    padding-right: 10%;
+    text-align: right;
+    -webkit-user-select: none;
+    -moz-user-select: none; /* Seems to be not working or have strange behavior... but select still works */
+    user-select: none;
+}
+.css3accordion h2 span:hover {
+    background-color: #353535;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#353535), color-stop(100%,#555555));
+    background: -webkit-linear-gradient(left,  #353535 0%,#555555 100%);
+    background: -moz-linear-gradient(left,  #353535 0%, #555555 100%);
+    background: linear-gradient(left,  #353535 0%,#555555 100%);
+}
+/* Inner part */
+.css3accordion li div {
+    margin-left: 5px;
+    padding-left: 48px;
+}
+/* Slide counter */
+.css3accordion h2 span:after {
+    color: #080808;
+    font-weight: bold;
+    left: 10%;
+    position: absolute;
+    text-shadow: -1px -1px 0 #555555;
+    top: 10%;
+    /* Rotate counter */
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+/* Counter values - for each slide */
+.css3accordion .slide1 h2 span:after {
+    content: '1';
+}
+.css3accordion .slide2 h2 span:after {
+    content: '2';
+}
+.css3accordion .slide3 h2 span:after {
+    content: '3';
+}
+.css3accordion .slide4 h2 span:after {
+    content: '4';
+}
+.css3accordion .slide5 h2 span:after {
+    content: '5';
+}
+/* Onclick event */
+#slide1:target ~ ol li.slide1,
+#slide2:target ~ ol li.slide2,
+#slide3:target ~ ol li.slide3,
+#slide4:target ~ ol li.slide4,
+#slide5:target ~ ol li.slide5 {
+    width: 768px;
+}
+/* Preserve bg while moving */
+#slide1:target ~ ol li.slide1 span,
+#slide2:target ~ ol li.slide2 span,
+#slide3:target ~ ol li.slide3 span,
+#slide4:target ~ ol li.slide4 span,
+#slide5:target ~ ol li.slide5 span {
+    background: #353535;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#353535), color-stop(100%,#555555));
+    background: -webkit-linear-gradient(left,  #353535 0%,#555555 100%);
+    background: -moz-linear-gradient(left,  #353535 0%, #555555 100%);
+    background: linear-gradient(left,  #353535 0%,#555555 100%);
+}
