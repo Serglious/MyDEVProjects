@@ -7,3 +7,37 @@ body {
     color: #262626;
     line-height: 1;
 }
+.accordion {
+    width: 500px;
+    margin: 0 auto;
+}
+.accordion-group {
+    margin-bottom: 2px;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+
+}
+.accordion-heading a {
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #0088cc;
+    display: block;
+    background-color: white;
+}
+.accordion-body {
+    height: 0;
+    transition: height 0.35s ease 0s;
+    overflow: hidden;
+}
+.accordion-inner {
+    padding: 9px 15px;
+    background-color: white;
+    border-top: 1px solid #E5E5E5
+}
+/* Onclick event */
+#slide1:target, #slide2:target, #slide3:target {
+    height: auto;
+}
+#slide1:target .accordion-inner, #slide2:target .accordion-inner, #slide3:target .accordion-inner {
+    background-color: #e6e6fa;
+}
