@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gesture Slider | Test Polygon</title>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat|Dancing+Script:700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery-1.8.3.js"></script>
+    <script type="text/javascript" src="jquery.hammer.js"></script>
+</head>
+<body>
+
+<!-- All slider elements contain here
+    Class names contains fc- prefix (mean "Flipping Circle"
+ -->
+<!-- Use for place arrow pic-->
+<div class="click"></div>
+
+<div id="fc-wrapper" class="fc-wrapper">
+
+    <!-- Right handle part -->
+    <div class="fc-handle fc-handle-pull"></div>
+
+    <!-- This element uses for create half-circle -->
+    <div class="fc-perspective">
+
+        <!-- Define bg to right slider part (when closed) -->
+        <div class="fc-overlay fc-overlay-reverse"></div>
+
+        <!-- Handler - middle part -->
+        <div class="fc-handle fc-handle-out">
+            <div></div>
+        </div>
+
+        <!-- Start with bottom slider part -->
+        <div class="fc-bottom">
+            <!-- This element is a left half-circle with bg, texture, round corners... -->
+            <div class="fc-bottom-bg">
+                <!-- Here we create base for content (text) - define padding's... -->
+                <div class="fc-content">
+                    <p>
+                       I can live with doubt, and uncertainty, and not knowing. I think it's much more interesting to live not knowing than to have answers which might be wrong.
+                       <span>Richard Feynman</span>
+                    </p>
+                </div>
+            </div>
+            <!-- This is black overlay for bottom part.
+                 .fc-overlay define black gradient overlay layer,
+                 when slider opens, wrapper element get .fc-wrapper-open class,
+                 we use this for change overlay opacity:
+                 by default .fc-overlay-solid class define 60% opacity,
+                 for open state we define .fc-wrapper-open .fc-overlay-solid
+                 that use opacity = 0 (full transparent). And use transition for smooth animation.
+            -->
+            <div class="fc-overlay fc-overlay-solid"></div>
+        </div>
+
+        <!-- This is cover - contain two parts - front and back -->
+        <div class="fc-flip">
+
+            <!-- Front part shown when slider closed -->
+            <div class="fc-front">
+                <!-- .fc-inner define width, height, bg-texture... -->
+                <div class="fc-inner">
+                    <!-- bg-overlay -->
+                    <div class="fc-overlay fc-overlay-left"></div>
+                    <!-- Handle for open/close -->
+                    <div class="fc-handle fc-handle-in">
+                        <div></div>
+                    </div>
+                    <div class="fc-content">
+                        <h3>
+                            <span>♞</span>
+                        </h3>
+                        <p>by Codrops</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Back part shown when opened -->
+            <div class="fc-back">
+                <div class="fc-inner">
+                    <div class="fc-content">
+                        <!-- Feynman face will be here))) -->
+                        <div class="feynman">
+                            <span>1918 – 1988</span>
+                        </div>
+                    </div>
+                    <div class="fc-overlay fc-overlay-right"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

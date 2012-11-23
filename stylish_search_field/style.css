@@ -35,6 +35,9 @@ body {
     border-radius: 10px;
     box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 1px 0 rgba(255,255,255,.2);
 }
+.form-wrapper p {
+    margin-bottom: 15px;
+}
 /* Font styles here - it's for user input. Placeholder text style we define after using pseudo-classes */
 .form-wrapper input {
     width: 330px;
@@ -43,7 +46,7 @@ body {
     float: left;
     font-family: 'Droid Sans', sans-serif;
     font-size: 14px;
-    border: 0; /* -moz-placeholder add his own red border, so we don't want two borders and set border: 0 */
+    border: 0;
     background-color: #eeeeee;
     border-radius: 3px 0 0 3px;
  }
